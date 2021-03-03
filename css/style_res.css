@@ -97,7 +97,7 @@
         display: block;
         width: 100%;
         max-width: 100%;
-        height: 100%;
+        height: 100vh;
         background: #fff;
         position: fixed;
         z-index: 9999;
@@ -105,7 +105,7 @@
         right: -100%;
         overflow: auto;
         transition: transform .75s;
-        padding: 0 0 75px;
+        padding: 75px 0 75px;
     }
 
     #header .menu li {
@@ -133,19 +133,19 @@
     }
 
     #toggle-menu {
-        width: 42px;
-        height: 36px;
+        width: 45px;
+        height: 45px;
         display: flex;
         justify-content: center;
         align-items: center;
         background: #fff;
-        border-radius: 3px;
+        border-radius: 5px;
         position: relative;
         z-index: 99999;
     }
 
     #toggle-menu.active {
-        background: none;
+        background: #7e7e7e;
     }
 
     .hamburger,
@@ -157,7 +157,7 @@
     .hamburger {
         position: relative;
         width: 30px;
-        height: 16px;
+        height: 20px;
         background: none;
         border: none;
         appearance: none;
@@ -178,7 +178,7 @@
     .hamburger span::after {
         content: '';
         position: absolute;
-        width: 51%;
+        width: 50%;
         height: 3px;
         background: #7e7e7e;
         transition: .2s;
@@ -186,12 +186,10 @@
 
     .hamburger span::before {
         left: 0;
-        border-radius: 4px 0 0 4px;
     }
 
     .hamburger span::after {
         right: 0;
-        border-radius: 0 4px 4px 0;
     }
 
     .hamburger span:nth-of-type(1) {
@@ -200,7 +198,7 @@
     }
 
     .hamburger span:nth-of-type(2) {
-        top: 7px;
+        top: 9px;
         left: 0;
     }
 
@@ -210,12 +208,12 @@
     }
 
     .hamburger.active span:nth-of-type(1)::before {
-        transform: translate(4px, 0) rotate(45deg);
+        transform: translate(2px, 3px) rotate(45deg);
         background: #fff;
     }
 
     .hamburger.active span:nth-of-type(1)::after {
-        transform: translate(-3px, 0) rotate(-45deg);
+        transform: translate(-2px, 3px) rotate(-45deg);
         background: #fff;
     }
 
@@ -230,20 +228,20 @@
     }
 
     .hamburger.active span:nth-of-type(3)::before {
-        transform: translate(4px, -6px) rotate(-45deg);
+        transform: translate(2px, -4px) rotate(-45deg);
         background: #fff;
     }
 
     .hamburger.active span:nth-of-type(3)::after {
-        transform: translate(-3px, -6px) rotate(45deg);
+        transform: translate(-2px, -4px) rotate(45deg);
         background: #fff;
     }
 
     /*----------------------
     content
     ----------------------*/
-    #box_service .ser-txt {
-        padding-right: 3%;
+    #box_service .ser-frame {
+        padding: 0 3% 0 40px;
     }
 
     #box_company .inner {
@@ -259,7 +257,8 @@
     footer 
     -----------------*/
     footer .logo {
-        width: 80px;
+        width: 70px;
+        right: 10px;
     }
 
     #footer .f-info .f-txt {
@@ -283,12 +282,12 @@
     }
 
     #box_message .m-quote {
-        font-size: 25px;
+        font-size: 22px;
         line-height: 2.4;
     }
 
     #box_service .ser-frame {
-        padding-left: 4.888vw;
+        padding: 0 3% 0 3.910vw;
     }
 
     #box_service .ser-txt {
@@ -356,7 +355,7 @@
     }
 
     #footer {
-        margin: 75px 0 0;
+        margin: 55px 0 0;
     }
 
     #footer .inner {
@@ -471,14 +470,6 @@
         text-align: center;
     }
 
-    #box_message .m-txt {
-        font-size: 14px;
-    }
-
-    #box_message .m-quote {
-        font-size: 20px;
-    }
-
     #box_service .ser-cont {
         display: block;
     }
@@ -495,7 +486,6 @@
 
     #box_service .ser-txt {
         max-width: 100%;
-        margin: 0 0 40px;
     }
 
     #box_service .c-btn1 a {

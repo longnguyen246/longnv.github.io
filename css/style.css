@@ -510,15 +510,17 @@ Contents
 
 #box_message .m-txt {
     font-size: 22px;
-    line-height: 2.5;
+    line-height: 2.6;
     font-weight: 700;
+    text-align: justify;
     margin: 0;
 }
 
 #box_message .m-quote {
     font-size: 32px;
     font-weight: 700;
-    line-height: 2.5;
+    line-height: 2.6;
+    text-align: justify;
     margin: 0;
 }
 
@@ -539,7 +541,7 @@ Contents
 
 #box_service .ser-frame {
     width: 50%;
-    padding-left: 80px;
+    padding: 0 3% 0 80px;
 }
 
 #box_service .ser-txt {
@@ -564,6 +566,7 @@ Contents
     position: relative;
     width: 245px;
     padding: 10px 0 0;
+    transition: 0.35s ease;
 }
 
 #box_service .c-btn1 .txt1::before,
@@ -598,6 +601,16 @@ Contents
     border: 2px solid #222222;
     border-radius: 50%;
     font-size: 16px;
+    transition: all 0.3s ease;
+}
+
+#box_service .c-btn1 a:hover .txt1 {
+    width: 250px;
+}
+
+#box_service .c-btn1 a:hover .txt2 {
+    color: #fff;
+    background: #7E7E7E;
 }
 
 #box_business .b-cont {
