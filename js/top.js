@@ -1,6 +1,6 @@
-$(document).ready(function() {
+$(document).ready(function () {
     "use strict";
-    $(".hamburger").click(function(e) {
+    $(".hamburger").click(function (e) {
         e.preventDefault();
         $(this).toggleClass('active');
         $('#toggle-menu').toggleClass('active');
@@ -9,39 +9,36 @@ $(document).ready(function() {
 
     });
 
+    var e = document.getElementById('js-slider');
+
+    if (e) {
+        var d = window.innerHeight;
+        document.getElementById('top_info').style.height = d + "px"
+    }
 
     loading();
     set_slide();
-
-    function loading() {
-        var $loading = $('#loading');
-
-        setTimeout(function() {
-            $loading.addClass('loading-hide');
-        }, 2000);
-    }
-
 });
 
 function loading() {
     var $loading = $('#loading');
 
-    setTimeout(function() {
+    setTimeout(function () {
         $loading.addClass('loading-hide');
     }, 2000);
 }
 
 function set_slide() {
     $('.mainvisual')
-        .on('init', function() {
+        .on('init', function () {
             if ($('.slide').length > 1) {
                 $('.slick-slide[data-slick-index="0"]').addClass('moving');
             }
         })
         .slick({
             autoplay: true,
-            speed: 5000,
-            autoplaySpeed: 5000,
+            speed: 3500,
+            autoplaySpeed: 3500,
             pauseOnFocus: false,
             pauseOnHover: false,
             draggable: false,
@@ -51,7 +48,7 @@ function set_slide() {
             infinite: true,
             fade: true,
         })
-        .on('beforeChange', function(event, slick, currentSlide, nextSlide) {
+        .on('beforeChange', function (event, slick, currentSlide, nextSlide) {
             if ($('.slide').length > 1) {
                 var slide_num = $('.slide').length;
                 $('.slide[data-slick-index="' + (currentSlide - 1) + '"]').removeClass('moving');
